@@ -59,7 +59,7 @@
 .section:after {
     content: '';
     position: absolute;
-    height: 654px; /* Thickness of the second line */
+    height: 554px; /* Thickness of the second line */
     width: 200%; /* Adjust width for similar visibility */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     top: 0; /* Start position at the top */
@@ -70,7 +70,7 @@
 }
 
 .section:hover:after {
-    animation: shineDiagonalTwo 12s ease forwards; /* Apply animation on hover -in-out */
+    animation: shineDiagonalTwo 12s ease-in-out forwards; /* Apply animation on hover  */
     opacity: 1; /* Make it visible on hover */
 }
 
