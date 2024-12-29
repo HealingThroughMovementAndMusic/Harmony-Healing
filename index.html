@@ -38,8 +38,8 @@
 .section:before {
     content: '';
     position: absolute;
-    height: 6px; /* Thickness of the line; increased for visibility */
-    width: 300%; /* Adjusted to ensure complete coverage */
+    height: 14px; /* Thickness of the line; increased for visibility */
+    width: 200%; /* Adjusted to ensure complete coverage */
     background: linear-gradient(90deg, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%); /* Red for testing */
     top: 100%; /* Start position at the bottom */
     left: 0; /* Start at the left edge */
@@ -49,7 +49,7 @@
 }
 
 .section:hover:before {
-    animation: shine 7s ease forwards; /* Apply animation on hover */
+    animation: shine 5s ease forwards; /* Apply animation on hover */
     opacity: 1; /* Make it visible on hover */
 }
 
