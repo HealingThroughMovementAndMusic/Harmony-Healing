@@ -38,22 +38,22 @@
 .section:before {
     content: '';
     position: absolute;
-    height: 2px; /* Line thickness */
-    width: 150%; /* Extend beyond the section width for seamless effect */
+    height: 2px; /* Thickness of the line */
+    width: 150%; /* Extend width for proper coverage */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-    top: 0; /* Start at the top */
-    left: -25%; /* Start slightly off the left side */
-    transform: rotate(45deg); /* Rotate the line to tilt it at approx 45 degrees */
+    top: 100%; /* Start position at the bottom */
+    left: 0; /* Start at the left edge */
+    transform: translateY(0) rotate(45deg); /* Create diagonal angle */
     animation: shine 3s ease-in-out forwards; /* Animation properties */
 }
 
 @keyframes shine {
     0% {
-        transform: translateY(100%) rotate(45deg); /* Start from bottom */
+        transform: translate(0, 0) rotate(45deg); /* Start at the bottom left */
     }
     100% {
-        transform: translateY(-100%) rotate(45deg); /* Move to top */
-        opacity: 0; /* Fade out */
+        transform: translate(100vw, -100vw) rotate(45deg); /* Move to top right */
+        opacity: 0; /* Fade out effect */
     }
 }
 
