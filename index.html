@@ -14,6 +14,9 @@
 		--about-bg-color: #96A7B6;
 		--gallery-bg-color: #70805D;
 	    	--contact-bg-color: #CBC8C4;
+		--about-bg-hover-color: #B9C3C8;        /* Lighter Shade for About Hover */
+ 		--gallery-bg-hover-color: #A4B74D;      /* Lighter Shade for Gallery Hover */
+  		--contact-bg-hover-color: #D5C7C1; 	 /* Lighter Shade for Contact Hover */
 	       }
 
         /* Basic structural style */
@@ -108,17 +111,17 @@
 			animation-delay: 0.6s; /* Staggered delay */
 		}
 
-	#about:hover {
-  			  background-color: lighten(var(--about-bg-color), 10%); /* Lighten the background color on hover */
-	}
+		#about:hover {
+			background-color: var(--about-bg-hover-color); /* Use the defined lighter color on hover */
+		}
 
-	#gallery:hover {
-		    background-color: lighten(var(--gallery-bg-color), 10%); /* Lighten on hover */
-	}
+		#gallery:hover {
+			background-color: var(--gallery-bg-hover-color); /* Use the defined lighter color on hover */
+		}
 
-	#contact:hover {
-		    background-color: lighten(var(--contact-bg-color), 10%); /* Lighten on hover */
-	}
+		#contact:hover {
+			background-color: var(--contact-bg-hover-color); /* Use the defined lighter color on hover */
+		}
 		
         .cta-button {
             display: inline-block;
