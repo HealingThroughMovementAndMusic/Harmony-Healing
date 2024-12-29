@@ -13,7 +13,7 @@
     		--text-color: #34495E;      /* Body */
 		--about-bg-hover-color: #a2b1be;        /* Lighter Shade for About Hover */
  		--gallery-bg-hover-color: #d4d2ce;      /* Lighter Shade for Gallery Hover */
-  		--contact-bg-hover-color: ; #acbcc0	 /* Lighter Shade for Contact Hover */
+  		--contact-bg-hover-color: ; #acbcc0;	 /* Lighter Shade for Contact Hover */
 	       }
 
         /* Basic structural style */
@@ -28,7 +28,13 @@
 	h1, h2, h3 {
 	    color: #34495E;
 	}
+	h2 {
+ 	    transition: text-shadow 0.3s ease; /* Transition for shadow effect */
+	}
 
+	h2:hover {
+	    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+	}
 		
 	.container {
 			width: 80%;
