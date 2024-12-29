@@ -35,16 +35,22 @@
     background-color: var(--secondary-color); /* Ensure base background color */
 }
 
-.section:hover {
+.section:before {
     content: '';
     position: absolute;
-    height: 4px; /* Thickness of the line; adjust as needed */
-    width: 1200%; /* Increase width significantly for a more dramatic effect */
+    height: 4px; /* Thickness of the line */
+    width: 1000%; /* Very wide for dramatic effect */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     top: 100%; /* Start position at the bottom */
     left: 0; /* Start at the left edge */
     transform: translateY(0) rotate(45deg); /* Create diagonal angle */
-    animation: shine 8s ease-in-out forwards; /* Increase animation duration to 5 seconds */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+.section:hover:before {
+    animation: shine 8s ease-in-out forwards; /* Apply animation on hover */
+    opacity: 1; /* Make it visible on hover */
 }
 
 @keyframes shine {
@@ -53,10 +59,9 @@
     }
     100% {
         transform: translate(100vw, -100vw) rotate(45deg); /* Move to top right */
-        opacity: 0; /* Fade out effect */
+        opacity: 0; /* Fade out */
     }
 }
-
 
 	    
 	h2 {
