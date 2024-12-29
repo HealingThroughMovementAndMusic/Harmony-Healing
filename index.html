@@ -39,21 +39,20 @@
     content: '';
     position: absolute;
     height: 2px; /* Line thickness */
-    width: 100%; /* Full width of the element */
+    width: 150%; /* Extend beyond the section width for seamless effect */
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-    // Adjust the gradient as needed for shine effect
-    top: 100%; /* Start from the bottom */
-    left: 0; /* Start at the left */
-    transform: translateY(-100%) translateX(-100%); /* Move it diagonally off-screen */
+    top: 0; /* Start at the top */
+    left: -25%; /* Start slightly off the left side */
+    transform: rotate(45deg); /* Rotate the line to tilt it at approx 45 degrees */
     animation: shine 3s ease-in-out forwards; /* Animation properties */
 }
 
 @keyframes shine {
     0% {
-        transform: translateY(100%) translateX(0); /* Start from bottom-left */
+        transform: translateY(100%) rotate(45deg); /* Start from bottom */
     }
     100% {
-        transform: translateY(-100%) translateX(100%); /* Move to top-right */
+        transform: translateY(-100%) rotate(45deg); /* Move to top */
         opacity: 0; /* Fade out */
     }
 }
