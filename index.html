@@ -39,8 +39,9 @@
     content: '';
     position: absolute;
     height: 4px; /* Thickness of the line */
-    width: 1000%; /* Very wide for dramatic effect */
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    width: 1200%; /* Very wide for dramatic effect */
+    /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);*/
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%); /* Change to red for visibility */
     top: 100%; /* Start position at the bottom */
     left: 0; /* Start at the left edge */
     transform: translateY(0) rotate(45deg); /* Create diagonal angle */
@@ -49,7 +50,7 @@
 }
 
 .section:hover:before {
-    animation: shine 8s ease-in-out forwards; /* Apply animation on hover */
+    animation: shine 11s ease-in-out forwards; /* Apply animation on hover */
     opacity: 1; /* Make it visible on hover */
 }
 
