@@ -54,6 +54,39 @@
     opacity: 1; /* Make it visible on hover */
 }
 
+
+
+.section:after {
+    content: '';
+    position: absolute;
+    height: 654px; /* Thickness of the second line */
+    width: 200%; /* Adjust width for similar visibility */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    top: 0; /* Start position at the top */
+    right: 0; /* Start at the right edge */
+    transform: translateY(0) rotate(-45deg); /* Create diagonal angle towards bottom left */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s; /* Smooth opacity transition */
+}
+
+.section:hover:after {
+    animation: shineDiagonalTwo 12s ease forwards; /* Apply animation on hover */
+    opacity: 1; /* Make it visible on hover */
+}
+
+/* Keyframes for the second shiny line animation */
+@keyframes shineDiagonalTwo {
+    0% {
+        transform: translate(0, 0) rotate(-45deg); /* Start position for second line */
+    }
+    50% {
+        opacity: 0.5; /* Semi-transparent midway */
+    }
+    100% {
+        transform: translate(-100vw, 100vw) rotate(-45deg); /* Move to bottom left */
+        opacity: 0; /* Fade out */
+    }
+}	    
 @keyframes shine {
     0% {
         transform: translate(0, 0) rotate(45deg); /* Start */
