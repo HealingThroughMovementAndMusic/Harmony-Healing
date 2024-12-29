@@ -5,14 +5,26 @@
     <title>Roman Yuntel - Relive Yourself</title>
 	<link rel="stylesheet" href="styles.css">
     <style>
+	:root {
+    		--primary-color: #2C3E50;  /* Dark Teal */
+    		--secondary-color: #16A085; /* Light Teal */
+    		--accent-color: #FF6F61;    /* Coral */
+    		--background-color: #F8F9F9; /* Soft Light Background */
+    		--text-color: #34495E;      /* Darker Text */
+	       }
         /* Basic structural style */
         body, html {
             margin: 0;
             padding: 0;
-			line-height: 1.6;
+	    line-height: 1.6;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+            /* color: #333; */
+	    color: var(--text-color);
         }
+	h1, h2, h3 {
+	    color: var(--primary-color);
+	}
+
 		
 		.container {
 			width: 80%;
@@ -51,26 +63,30 @@
         }
 		
 		#about {
-			background-color: #96A7B6; /* Replace with your desired color */
+			background-color: var(--secondary-color);
+			/*background-color: #96A7B6;  Replace with your desired color */
 			/* padding: 40px; Optional: Add padding for aesthetics
 			color: #333;  Optional: Set text color */
 		}
 		
 		#gallery {
-			background-color: #CBC8C4; /* Replace with your desired color */
+			background-color: var(--background-color);
+			/*background-color: #CBC8C4;  Replace with your desired color */
 			/* padding: 40px; Optional: Add padding for aesthetics 
 			color: #333;  Optional: Set text color */
 		}
 		
 		#contact {
-			background-color: #A1B3B8     ; /* Replace with your desired color */
+			background-color: var(--primary-color);
+			/*background-color: #A1B3B8     ;  Replace with your desired color */
 			/* padding: 40px; Optional: Add padding for aesthetics 
 			color: #333;  Optional: Set text color */
 		}
 		
         .cta-button {
             display: inline-block;
-            background-color: #70805D;
+	    background-color: var(--accent-color);	
+            /* background-color: #70805D; */
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -80,7 +96,8 @@
         }
 
         .cta-button:hover {
-            background-color: #d86b14;
+	    background-color: #e05b39; /* Slightly darker on hover */
+            /* background-color: #d86b14; */
         }
 
         .about-content {
@@ -124,7 +141,8 @@
         }
 
         .gallery-grid img:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+            /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
         }
 
         footer {
