@@ -74,6 +74,7 @@
 		/*background-color: #CBC8C4;  Replace with your desired color */
 		 padding: 40px; /* Optional: Add padding for aesthetics 
 		color: #333;  Optional: Set text color */
+		animation-delay: 0.4s; /* Staggered delay */
 		}
 		
 	#contact {
@@ -81,7 +82,28 @@
 			/*background-color: #A1B3B8     ;  Replace with your desired color */
 			padding: 40px; /*  Optional: Add padding for aesthetics 
 			color: #333;  Optional: Set text color */
+			animation-delay: 0.6s; /* Staggered delay */
 		}
+	#about,
+	#gallery,
+	#contact {
+ 			   transition: background-color 0.3s ease; /* Add transition */
+		   	   opacity: 0; /* Initial state */
+    			   animation: fadeIn 0.6s forwards; /* Apply fade-in animation */
+    			   animation-delay: 0.2s; /* Staggered delay for each section */
+		}
+
+	#about:hover {
+    background-color: lighten(var(--about-bg-color), 10%); /* Lighten the background color on hover */
+	}
+
+	#gallery:hover {
+		    background-color: lighten(var(--gallery-bg-color), 10%); /* Lighten on hover */
+	}
+
+	#contact:hover {
+		    background-color: lighten(var(--contact-bg-color), 10%); /* Lighten on hover */
+	}
 		
         .cta-button {
             display: inline-block;
