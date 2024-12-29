@@ -40,7 +40,7 @@
     position: absolute;
     height: 14px; /* Thickness of the line; increased for visibility */
     width: 200%; /* Adjusted to ensure complete coverage */
-    background: linear-gradient(90deg, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 50%, rgba(255, 0, 0, 0) 100%); /* Red for testing */
+    background: linear-gradient(90deg, rgba(0, 128, 255, 0) 0%, rgba(0, 128, 255, 1) 50%, rgba(0, 128, 255, 0) 100%);
     top: 100%; /* Start position at the bottom */
     left: 0; /* Start at the left edge */
     transform: translateY(0) rotate(45deg); /* Create diagonal angle */
@@ -49,16 +49,21 @@
 }
 
 .section:hover:before {
-    animation: shine 5s ease forwards; /* Apply animation on hover */
+    animation: shine 12s ease forwards; /* Apply animation on hover */
+    animation-delay: 0.5s; 
     opacity: 1; /* Make it visible on hover */
 }
 
 @keyframes shine {
     0% {
-        transform: translate(0, 0) rotate(45deg); /* Start at the bottom left */
+        transform: translate(0, 0) rotate(45deg); /* Start */
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0.5; /* Semi-transparent midway */
     }
     100% {
-        transform: translate(100vw, -100vw) rotate(45deg); /* Move to top right */
+        transform: translate(100vw, -100vw) rotate(45deg); /* Move */
         opacity: 0; /* Fade out */
     }
 }
