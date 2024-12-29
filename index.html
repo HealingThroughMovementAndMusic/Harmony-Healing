@@ -92,11 +92,12 @@
             text-decoration: none;
             border-radius: 25px;
             margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
         }
 
         .cta-button:hover {
 	    background-color: #d86b14; /* Slightly darker on hover */
+	    transform: scale(1.05); /* Slightly increase size on hover */
             /* background-color: #d86b14; */
         }
 
@@ -137,11 +138,12 @@
             width: 100%;
             height: auto;
             border-radius: 4px;
-            transition: box-shadow 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
         }
 
         .gallery-grid img:hover {
-	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow effect */
+	    transform: scale(1.05); /* Slightly increase size on hover */
+	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow effect */
             /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
         }
 
