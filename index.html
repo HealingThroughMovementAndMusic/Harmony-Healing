@@ -40,17 +40,17 @@
     position: absolute;
     height: 14px; /* Thickness of the line; increased for visibility */
     width: 200%; /* Adjusted to ensure complete coverage */
-    background: linear-gradient(90deg, rgba(0, 128, 255, 0) 0%, rgba(0, 128, 255, 1) 50%, rgba(0, 128, 255, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     top: 100%; /* Start position at the bottom */
     left: 0; /* Start at the left edge */
     transform: translateY(0) rotate(45deg); /* Create diagonal angle */
     opacity: 0; /* Start invisible */
-    transition: opacity 0.3s; /* Smooth opacity transition */
+    transition: opacity 0.4s; /* Smooth opacity transition */
 }
 
 .section:hover:before {
     animation: shine 12s ease forwards; /* Apply animation on hover */
-    animation-delay: 0.5s; 
+    animation-delay: 0.1s; 
     opacity: 1; /* Make it visible on hover */
 }
 
